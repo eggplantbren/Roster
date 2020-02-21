@@ -1,9 +1,15 @@
 from database import *
+import datetime
 
 def main_menu():
     """
     Display the main menu. Return the selected option.
     """
+    print("Roster Main Menu")
+    print("====================================")
+    print("Today's date: " + str(datetime.date.today()))
+    print("====================================\n")
+
     print("[T] View or manage tasks.")
     print("[P] View or manage people.")
 
@@ -11,8 +17,9 @@ def main_menu():
     response = input("Enter your choice: ")
     return response.lower()
 
-create_tables()
 
+
+create_tables()
 
 while True:
     response = main_menu()
